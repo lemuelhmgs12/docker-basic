@@ -52,7 +52,7 @@ def run(year, month, pg_user_name, pg_password, pg_port, pg_host, pg_db, target_
     )
 
     engine = create_engine(
-        f"postgresql+psycopg://{pg_user_name}:{pg_password}@{pg_host}:{pg_port}/{pg_db}"
+        f"postgresql+psycopg2://{pg_user_name}:{pg_password}@{pg_host}:{pg_port}/{pg_db}"
     )
 
     df_copy.head(n=0).to_sql(name=target_table, con=engine, if_exists="replace")
