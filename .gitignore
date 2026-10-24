@@ -9,5 +9,7 @@ wheels/
 .ipynb_checkpoints
 # Virtual environments
 .venv
+#macOS
+.DS_Store
 
 *.parquet
